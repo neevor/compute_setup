@@ -9,19 +9,13 @@ if test ! $(which brew); then
 fi
 
 brew update
-brew install tmux htop wget tree
-
-# Set fast key repeat rate
-defaults write NSGlobalDomain KeyRepeat -int 0
-
-# Enable tap-to-click
-defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
+brew install tmux htop wget tree visual-studio-code
 
 wget https://repo.anaconda.com/archive/Anaconda3-2022.05-MacOSX-x86_64.pkg
 open Anaconda3-2022.05-MacOSX-x86_64.pkg
 rm Anaconda3-2022.05-MacOSX-x86_64.pkg
 source ~/.zshrc
+
+pip install awscli
 
 echo "Macbook setup completed!"
